@@ -2,9 +2,10 @@
 该工程主要是自己学习的时候用来记录的，欢迎下载，欢迎fork
 
 #### 项目介绍(文件夹说明)
-- 1、学习记录[学习记录]()
-- 2、vue-36kr是仿36kr网站做的工程
-[参考具体的说明文档](https://gitee.com/pengguojin/vuecli.git)
+- 1、学习记录           
+    [学习记录](https://gitee.com/pengguojin/vuecli.git)
+- 2、vue-36kr是仿36kr网站做的工程       
+    [参考具体的说明文档](https://gitee.com/pengguojin/vuecli.git)
 #### 软件架构
 - 1、vue-36kr架构 
     -  后台使用koa和koa-router搭建的服务器
