@@ -3,16 +3,16 @@
 
 #### 项目介绍(文件夹说明)
 - 1、学习记录           
-    [学习记录](https://gitee.com/pengguojin/vuecli.git)
+    参考链接：[学习记录](https://gitee.com/pengguojin/vuecli.git)
 - 2、vue-36kr是仿36kr网站做的工程       
-    [参考具体的说明文档](https://gitee.com/pengguojin/vuecli.git)
+    参考链接：[vue-36kr工程](https://gitee.com/pengguojin/vuecli.git)
 #### 软件架构
 - 1、vue-36kr架构 
     -  后台使用koa和koa-router搭建的服务器
     -  前台使用vue-cli构建，使用vuex管理全局状态
 
 #### 安装教程
-
+- vue-36kr工程：
 1. 命令行进入vue-36kr/koa文件夹，执行命令npm i安装依赖包
 2. 然后执行命令node server.js，让后台跑起来
 2. 命令行进入vue-36kr/vue文件夹，执行命令npm i安装依赖包
