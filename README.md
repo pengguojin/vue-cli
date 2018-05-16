@@ -2,7 +2,7 @@
 
 #### 项目介绍
 vue-36kr是仿36kr网站做的工程
-
+[参考具体的说明文档](https://gitee.com/pengguojin/vuecli.git)
 #### 软件架构
 - 1、vue-36kr架构 
     -  后台使用koa和koa-router搭建的服务器
