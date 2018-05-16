@@ -12,7 +12,7 @@
     -  前台使用vue-cli构建，使用vuex管理全局状态
 
 #### 安装教程
-
+- vue-36kr工程：
 1. 命令行进入vue-36kr/koa文件夹，执行命令npm i安装依赖包
 2. 然后执行命令node server.js，让后台跑起来
 2. 命令行进入vue-36kr/vue文件夹，执行命令npm i安装依赖包
