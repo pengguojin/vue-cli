@@ -6,16 +6,17 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   strict: true,
   state: {
+    loading: false
   },
   mutations: {
+    loadings (state) {
+      state.loading = !state.loading
+    }
   },
   actions: {
-    // async loadDetail ({commit, state}, arg) {
-    //   let data = await (await fetch(`http://localhost:8090/detail?id=${arg}`)).json()
-    //   commit('loadDetail', data)
-    // }
-  },
-  getters: {
+    async loadings ({commit}) {
+      commit('loadings')
+    }
   }
 })
 

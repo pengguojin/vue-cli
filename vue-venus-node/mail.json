@@ -1,0 +1,1 @@
+{"retrun":true,"jobstatus":true,"config":{"jobhour":"10","jobminute":"13","mailConfig":{"host":"529038529@qq.com","port":465,"ssl":true,"user":"","password":"","recipients":"xie_jianjin@venustech.com.cn","subject":"daily report for #{date}","body":"时间:#{datetime}</br>备注:#{remark}"}}}

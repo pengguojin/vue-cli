@@ -1,0 +1,34 @@
+{
+    "total": 0,
+    "page": 1,
+    "pageSize": 20,
+    "records": 0,
+    "data": [
+        {
+            "id": 1,
+            "name": "测试通报1",
+            "create_time": "2018-01-01",
+            "complate_time": "2018-01-01",
+            "desc": "测试描述",
+            "status": "待审批",
+            "create_by": "admin",
+            "begin_time": "2018-01-01",
+            "classify": "通报",
+            "priority": "高"
+        },
+        {
+            "id": 2,
+            "name": "测试通报2",
+            "create_time": "2018-01-02",
+            "complate_time": "2018-01-01",
+            "desc": "测试描述",
+            "status": "待审批",
+            "create_by": "admin",
+            "begin_time": "2018-01-01",
+            "classify": "子通报",
+            "priority": "中"
+        }
+    ],
+    "sidx": null,
+    "sord": "asc"
+}

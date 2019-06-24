@@ -1,167 +1,113 @@
-<!--  -->
+<!-- 工单主页 -->
 <template lang="html">
-<div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li v-for="menu in menus" class="nav-item" data-toggle="tooltip" data-placement="right" :title="menu.title"  @click="toggleTab(menu.href)">
-          <router-link class="nav-link" to="">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">{{menu.title}}</span>
-          </router-link>
-        </li>
-      </ul>
-      <ul class="navbar-nav sidenav-toggler">
-        <li class="nav-item">
-          <a class="nav-link text-center" id="sidenavToggler">
-            <i class="fa fa-fw fa-angle-left"></i>
-          </a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-envelope"></i>
-            <span class="d-lg-none">Messages
-              <span class="badge badge-pill badge-primary">12 New</span>
+    <div class="main">
+      <div class="work-top">
+        <div style="float: left;font-size: 26px;margin: 3px;">
+          <i class="el-icon-menu"></i>监控系统</div>
+        <div style="float:right;margin: 8px;">
+          <el-dropdown>
+            <span class="el-dropdown-link">
+              设置<i class="el-icon-arrow-down el-icon--right"></i>
             </span>
-            <span class="indicator text-primary d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-            <h6 class="dropdown-header">New Messages:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>David Miller</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>Jane Smith</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <strong>John Doe</strong>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#">View all messages</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-bell"></i>
-            <span class="d-lg-none">Alerts
-              <span class="badge badge-pill badge-warning">6 New</span>
-            </span>
-            <span class="indicator text-warning d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">New Alerts:</h6>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-danger">
-                <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-              </span>
-              <span class="small float-right text-muted">11:21 AM</span>
-              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#">View all alerts</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <form class="form-inline my-2 my-lg-0 mr-lg-2">
-            <div class="input-group">
-              <input class="form-control" type="text" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-          </form>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="content-wrapper">
-      <Dashboard :is="currentMenus"/>
-      <Footer/>
-      <Scroll />
-  </div>
-</div>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item><a @click="logout">登出</a></el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
+        <div style="float:right;width:20%;margin-right: 20px;">
+          <el-input placeholder="请输入内容" class="input-with-select" prefix-icon="el-icon-search">
+            <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
+          </el-input>
+        </div>
+      </div>
+      <div class="work-left">
+        <el-menu default-active="/main/Dashboard" class="el-menu-vertical-demo" @select="handleSelect"
+            active-text-color="#ff9000" router>
+          <div :key="index" v-for="(menu, index) in menus" >
+            <el-menu-item :index="menu.url" v-if="menu.chilenNode.length==0">
+              <i class="el-icon-menu"></i>
+              <span slot="title">{{menu.title}}</span>
+            </el-menu-item>
 
+            <el-submenu :index="menu.url" v-if="menu.chilenNode.length>0">
+              <template slot="title">
+                  <i class="el-icon-menu"></i>
+                  <span>{{menu.title}}</span>
+              </template>
+              <el-menu-item-group :key="index" v-for="(c, index) in menu.chilenNode">
+                  <el-menu-item :index="c.url">
+                      <i class="el-icon-document"></i>
+                      <span slot="title">{{c.title}}</span>
+                  </el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+          </div>
+        </el-menu>
+      </div>
+      <div class="work-right">
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </div>
+    </div>
 </template>
 
 <script>
-import Dashboard from './plugins/dashboard'
-import Chart from '@/components/plugins/chart'
-import Footer from '@/components/common/Footer'
-import Scroll from '@/components/common/Scroll'
+import { getMenuPath, logout } from '@/config/getData'
 
 export default {
-  name: 'mains',
   data () {
-      return {
-          menus: [
-              {title: '主页', href: 'dashboard'},
-              {title: 'Charts', href: 'Chart'},
-              {title: 'Tables', href: ''},
-              {title: 'Example Pages', href: ''},
-              {title: 'Menu Levels', href: ''},
-              {title: 'Link', href: ''},
-              {title: '权限', href: ''}
-          ],
-          currentMenus: 'dashboard' //第一次加载的页面
-      }
+    return {
+      menus: []
+    }
   },
-  components: {
-    Dashboard, Chart, Footer, Scroll
+  created() {
+    getMenuPath('1').then(json=>{
+      this.menus = json.data
+    })
+    this.$router.push('/main/Dashboard')
   },
   methods: {
-    toggleTab (arg) {
-      console.log(arg);
-      
-      this.currentMenus = arg
-    }
+      handleSelect(key, keyPath) {
+      },
+      logout () {
+        logout().then(json=>{
+          this.$router.push('/')
+        })
+      }
   }
 }
 
 </script>
 <style lang="css" scoped>
+    .main { 
+      padding-top: 5px;
+    }
+    .work-top {
+        width: 100%;
+        height: 6%;
+        float: left;
+        border-bottom: solid 1px #e6e6e6;
+    }
+    .work-left {
+        width: 15%;
+        height: 94%;
+        float: left;
+        border-right: solid 1px #e6e6e6;
+    }
+    .work-right {
+        /* padding: 5px; */
+        width: 85%;
+        height: 94%;
+        float: left;
+    }
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .3s;
+    }
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+    .pull-nav {
+      float: right;
+    }
 </style>
